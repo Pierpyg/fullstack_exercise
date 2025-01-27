@@ -1,16 +1,10 @@
 const express = require('express');
 const morgan = require('morgan');
-const cors = require('cors');
 require('dotenv').config();
 const Person = require('./models/person');
 
 const app = express();
 
-// Middleware per abilitare CORS
-app.use(cors({
-  origin: 'https://render-test-frontend-dpnp.onrender.com',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
 
 // Middleware per il parsing del JSON
 app.use(express.json());
